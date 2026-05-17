@@ -5,7 +5,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>John Blaise Bueno | Backend Engineer</title>
+    <title>reizucodes | Build With Me</title>
+
+    <link rel="icon" type="image/png" href="./assets/images/profile.png" />
 
     <style>
       :root {
@@ -895,12 +897,14 @@
     </section>
 
     <footer>
-      <p>© 2026 John Blaise Bueno — Backend Engineer</p>
+      <p>reizucodes © <span id="year"></span></p>
     </footer>
 
     <div id="toast"></div>
 
     <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
       document.addEventListener("DOMContentLoaded", () => {
         const observer = new IntersectionObserver(
           (entries) => {
