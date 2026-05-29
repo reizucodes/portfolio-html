@@ -58,7 +58,7 @@ const onSubmit = async (event: Event): Promise<void> => {
 
 <template>
   <section id="contact" aria-labelledby="contact-heading" class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950 p-8 shadow-xl">
-    <h2 id="contact-heading" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Contact</h2>
+    <h2 id="contact-heading" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Let's Connect</h2>
     <div class="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
       <form
         id="contactForm"

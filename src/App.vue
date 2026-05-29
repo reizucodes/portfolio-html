@@ -5,6 +5,8 @@ import HeroSection from './components/sections/HeroSection.vue';
 import ProjectsGridSection from './components/sections/ProjectsGridSection.vue';
 import SkillsSection from './components/sections/SkillsSection.vue';
 import { contactLinks, experience, featuredWork, heroContent, projects, skillGroups } from './data/content';
+
+const currentYear = new Date().getFullYear();
 </script>
 
 <template>
@@ -47,5 +49,8 @@ import { contactLinks, experience, featuredWork, heroContent, projects, skillGro
       <ExperienceSection :items="experience" />
       <ContactSection :links="contactLinks" />
     </main>
+    <footer class="py-6">
+      <p class="text-center text-sm text-slate-400">reizucodes © {{ currentYear }}</p>
+    </footer>
   </div>
 </template>
