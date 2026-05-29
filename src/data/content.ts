@@ -14,7 +14,7 @@ export const heroContent: HeroContent = {
   ctas: [
     { label: 'View Featured Work', href: '#featured-work' },
     { label: 'GitHub', href: 'https://github.com/reizucodes' },
-    { label: 'Contact', href: '#contact' },
+    { label: "Let's Connect", href: '#contact' },
   ],
 };
 

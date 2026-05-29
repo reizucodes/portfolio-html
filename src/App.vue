@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
     <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/85 backdrop-blur">
       <nav class="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
         <div>
-          <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">reizucodes</p>
+          <a href="#hero" class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-300 hover:text-emerald-200">reizucodes</a>
           <!-- <p class="text-xs text-slate-400">Full-stack software engineering showcase</p> -->
         </div>
         <ul class="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-300">
