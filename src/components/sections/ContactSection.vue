@@ -126,9 +126,9 @@ const onSubmit = async (event: Event): Promise<void> => {
         <ul class="mt-3 space-y-2 text-sm text-slate-300">
           <li><span class="font-semibold text-slate-100">Timezone:</span> GMT+8 (PH)</li>
           <li><span class="font-semibold text-slate-100">Availability:</span> Open to full-stack product and platform roles</li>
-          <li><span class="font-semibold text-slate-100">Best Fit:</span> Web apps, API-driven systems, KPI dashboards, and product engineering</li>
-          <li><span class="font-semibold text-slate-100">Capability:</span> AI-assisted workflow engineering for personal-project delivery automation</li>
-          <li><span class="font-semibold text-slate-100">Deployment:</span> CI/CD pipelines with GitHub Actions, automated code checks/tests in dev pipelines, Linux SSH workflows, and production deployment support</li>
+          <li><span class="font-semibold text-slate-100">Best Fit:</span> Web apps, API-driven systems, developer tooling, and product engineering</li>
+          <li><span class="font-semibold text-slate-100">Capability:</span> AI-assisted workflow engineering for personal projects</li>
+          <li><span class="font-semibold text-slate-100">Deployment:</span> CI/CD pipelines with GitHub Actions, automated code checks and tests, Linux-server SSH deployment, and production deployment support</li>
           <li><span class="font-semibold text-slate-100">Response:</span> Usually within 24–48 hours</li>
         </ul>
       </div>

@@ -249,6 +249,6 @@ export const experience: readonly ExperienceItem[] = [
 
 export const contactLinks: readonly ContactLink[] = [
   { label: 'GitHub', href: 'https://github.com/reizucodes' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/reizu/' },
-  { label: 'Email', href: 'mailto:reizu.codes@gmail.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/blaisebueno/' },
+  { label: 'Email', href: 'mailto:blaisebueno@gmail.com' },
 ];
