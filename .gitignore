@@ -1,0 +1,9 @@
+AGENTS.md
+CLAUDE.md
+INDEX.md
+.ai/
+.codex/
+examples/
+node_modules/
+dist/
+artifacts/
