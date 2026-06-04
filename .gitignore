@@ -7,3 +7,6 @@ examples/
 node_modules/
 dist/
 artifacts/
+.opencode/
+.claude/
+opencode.json

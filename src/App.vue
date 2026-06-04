@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import ContactSection from './components/sections/ContactSection.vue';
 import ExperienceSection from './components/sections/ExperienceSection.vue';
 import HeroSection from './components/sections/HeroSection.vue';
@@ -7,6 +8,15 @@ import SkillsSection from './components/sections/SkillsSection.vue';
 import { contactLinks, experience, featuredWork, heroContent, projects, skillGroups } from './data/content';
 
 const currentYear = new Date().getFullYear();
+const isMobileNavOpen = ref(false);
+const mobileNavId = 'primary-navigation-menu';
+const navLinks = [
+  { href: '#featured-work', label: 'Featured Work' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#contact', label: 'Contact', cta: true },
+];
 </script>
 
 <template>
@@ -16,17 +26,49 @@ const currentYear = new Date().getFullYear();
 
   <div class="min-h-screen bg-slate-950 text-slate-100">
     <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/85 backdrop-blur">
-      <nav class="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
-        <div>
-          <a href="#hero" class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-300 hover:text-emerald-200">reizucodes</a>
-          <!-- <p class="text-xs text-slate-400">Full-stack software engineering showcase</p> -->
+      <nav
+        class="mx-auto flex w-full max-w-7xl flex-col items-start gap-3 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8"
+        aria-label="Primary navigation"
+      >
+        <div class="flex w-full items-center justify-between gap-4 md:w-auto">
+          <div>
+            <a href="#hero" class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-300 hover:text-emerald-200">reizucodes</a>
+            <!-- <p class="text-xs text-slate-400">Full-stack software engineering showcase</p> -->
+          </div>
+          <button
+            type="button"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-slate-200 transition hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300 md:hidden"
+            :aria-expanded="isMobileNavOpen"
+            :aria-controls="mobileNavId"
+            aria-label="Toggle navigation menu"
+            @click="isMobileNavOpen = !isMobileNavOpen"
+          >
+            <span class="sr-only">Menu</span>
+            <span class="flex flex-col gap-1.5">
+              <span class="h-0.5 w-5 rounded-full bg-current"></span>
+              <span class="h-0.5 w-5 rounded-full bg-current"></span>
+              <span class="h-0.5 w-5 rounded-full bg-current"></span>
+            </span>
+          </button>
         </div>
-        <ul class="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-300">
-          <li><a href="#featured-work" class="rounded-full px-2 py-1 transition hover:bg-white/10 hover:text-white">Featured Work</a></li>
-          <li><a href="#projects" class="rounded-full px-2 py-1 transition hover:bg-white/10 hover:text-white">Projects</a></li>
-          <li><a href="#skills" class="rounded-full px-2 py-1 transition hover:bg-white/10 hover:text-white">Skills</a></li>
-          <li><a href="#experience" class="rounded-full px-2 py-1 transition hover:bg-white/10 hover:text-white">Experience</a></li>
-          <li><a href="#contact" class="rounded-full border border-emerald-300/40 bg-emerald-300/10 px-3 py-1.5 text-emerald-200 transition hover:bg-emerald-300/20">Contact</a></li>
+        <ul
+          :id="mobileNavId"
+          :class="[
+            isMobileNavOpen ? 'flex' : 'hidden',
+            'w-full flex-col gap-2 text-sm font-medium text-slate-300 md:flex md:w-auto md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-3',
+          ]"
+        >
+          <li v-for="link in navLinks" :key="link.href">
+            <a
+              :href="link.href"
+              :class="link.cta
+                ? 'block rounded-xl border border-emerald-300/40 bg-emerald-300/10 px-3 py-2 text-emerald-200 transition hover:bg-emerald-300/20 md:rounded-full md:px-3 md:py-1.5'
+                : 'block rounded-xl px-3 py-2 transition hover:bg-white/10 hover:text-white md:rounded-full md:px-2 md:py-1'"
+              @click="isMobileNavOpen = false"
+            >
+              {{ link.label }}
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
