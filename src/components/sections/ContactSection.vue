@@ -125,14 +125,14 @@ const onSubmit = async (event: Event): Promise<void> => {
       <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
         <h3 class="text-sm font-semibold uppercase tracking-[0.12em] text-emerald-200">Direct Connect</h3>
         <p class="mt-3 text-sm leading-relaxed text-slate-300">
-          Best fit for full-stack product and platform roles where APIs, internal tools, and workflow systems matter.
+          Interested in discussing software engineering opportunities, technical projects, or potential collaborations.
         </p>
-        <ul class="mt-3 space-y-2 text-sm text-slate-300">
-          <li><span class="font-semibold text-slate-100">Availability:</span> Open to full-stack product and platform roles</li>
-          <li><span class="font-semibold text-slate-100">Best Fit:</span> Web apps, API-driven systems, developer tooling, and product engineering</li>
-          <li><span class="font-semibold text-slate-100">Recent scope:</span> Payments, logistics, dashboards, and internal tooling</li>
-          <li><span class="font-semibold text-slate-100">Preferred path:</span> Email or LinkedIn for role discussions and collaboration</li>
-        </ul>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li><span class="font-semibold text-slate-100">Open To:</span> Software Engineering Opportunities & Collaborations</li>
+            <li><span class="font-semibold text-slate-100">Topics:</span> Full-Stack Development, APIs & Integrations, Business Systems</li>
+            <li><span class="font-semibold text-slate-100">Response Time:</span> Usually within 24–48 hours</li>
+            <li><span class="font-semibold text-slate-100">Contact Methods:</span> Contact Form, Email, or LinkedIn</li>
+          </ul>
       </div>
     </div>
 
