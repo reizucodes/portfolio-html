@@ -8,7 +8,7 @@ import type {
 } from '../types/content';
 
 export const heroContent: HeroContent = {
-  eyebrow: 'Mid-Level Software Engineer',
+  eyebrow: 'John Blaise Bueno | Software Engineer',
   headline: 'Building Software That Solves Real Business Problems',
   supportingLine:
     'Developing full-stack applications, integrations, and internal platforms that streamline business processes and support day-to-day operations.',
@@ -25,7 +25,7 @@ export const heroContent: HeroContent = {
 };
 
 export const currentRoleSnapshot: CurrentRoleSnapshot = {
-  eyebrow: 'Current Role Snapshot',
+  eyebrow: 'Current Role',
   title: 'Mid Software Developer at FlowerStore Group',
   summary:
     'Delivering full-stack solutions that support e-commerce operations, payment integrations, logistics workflows, and internal business platforms.',
