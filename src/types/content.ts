@@ -2,10 +2,21 @@ export interface HeroContent {
   eyebrow: string;
   headline: string;
   supportingLine: string;
-  ctas: {
-    label: string;
-    href: string;
-  }[];
+  chips: string[];
+  ctas: HeroCta[];
+}
+
+export interface HeroCta {
+  label: string;
+  href: string;
+  variant: 'primary' | 'secondary';
+}
+
+export interface CurrentRoleSnapshot {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  highlights: string[];
 }
 
 export interface ProjectLink {
@@ -22,7 +33,9 @@ export interface ProjectDeepDive {
 export interface ProjectCaseStudy {
   id: string;
   title: string;
+  tier: 'flagship' | 'secondary' | 'optional';
   valueProposition: string;
+  proofLine: string;
   positioningContext: string;
   problemContext: string;
   summary?: string;
@@ -34,7 +47,6 @@ export interface ProjectCaseStudy {
   deepDive?: ProjectDeepDive;
   tags: string[];
   links: ProjectLink[];
-  featured: boolean;
 }
 
 export interface SkillGroup {

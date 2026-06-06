@@ -110,6 +110,7 @@ const onSubmit = async (event: Event): Promise<void> => {
         </button>
         <p
           v-if="status !== 'idle'"
+          aria-live="polite"
           :class="[
             'text-sm',
             status === 'success' ? 'text-emerald-200' : '',
@@ -123,13 +124,14 @@ const onSubmit = async (event: Event): Promise<void> => {
 
       <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
         <h3 class="text-sm font-semibold uppercase tracking-[0.12em] text-emerald-200">Direct Connect</h3>
+        <p class="mt-3 text-sm leading-relaxed text-slate-300">
+          Best fit for full-stack product and platform roles where APIs, internal tools, and workflow systems matter.
+        </p>
         <ul class="mt-3 space-y-2 text-sm text-slate-300">
-          <li><span class="font-semibold text-slate-100">Timezone:</span> GMT+8 (PH)</li>
           <li><span class="font-semibold text-slate-100">Availability:</span> Open to full-stack product and platform roles</li>
           <li><span class="font-semibold text-slate-100">Best Fit:</span> Web apps, API-driven systems, developer tooling, and product engineering</li>
-          <li><span class="font-semibold text-slate-100">Capability:</span> AI-assisted workflow engineering for personal projects</li>
-          <li><span class="font-semibold text-slate-100">Deployment:</span> CI/CD pipelines with GitHub Actions, automated code checks and tests, Linux-server SSH deployment, and production deployment support</li>
-          <li><span class="font-semibold text-slate-100">Response:</span> Usually within 24–48 hours</li>
+          <li><span class="font-semibold text-slate-100">Recent scope:</span> Payments, logistics, dashboards, and internal tooling</li>
+          <li><span class="font-semibold text-slate-100">Preferred path:</span> Email or LinkedIn for role discussions and collaboration</li>
         </ul>
       </div>
     </div>
@@ -141,7 +143,7 @@ const onSubmit = async (event: Event): Promise<void> => {
             :href="link.href"
             :target="link.href.startsWith('mailto:') ? undefined : '_blank'"
             :rel="link.href.startsWith('mailto:') ? undefined : 'noreferrer noopener'"
-            :aria-label="link.label"
+            :aria-label="link.label === 'Email' ? 'Send email to John Blaise Bueno' : `Open ${link.label}`"
             class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-emerald-100 transition hover:bg-emerald-300/20 hover:text-white"
           >
             <svg v-if="iconPaths[link.label]" viewBox="0 0 24 24" class="h-5 w-5 fill-current">
