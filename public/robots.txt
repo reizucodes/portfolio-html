@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://reizucodes.vercel.app/sitemap.xml
+Sitemap: https://reizucodes.com/sitemap.xml

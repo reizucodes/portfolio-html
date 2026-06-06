@@ -106,6 +106,16 @@ const navLinks = [
     </main>
     <footer class="py-6">
       <p class="text-center text-sm text-slate-400">reizucodes © {{ currentYear }}</p>
+      <!-- 
+      <a href="https://websitelaunches.com/site/reizucodes.com" target="_blank" rel="noopener">
+        <img
+          src="https://websitelaunches.com/badge/reizucodes.com.svg?theme=dark"
+          alt="Established online - Public launch record"
+          width="255"
+          height="55"
+        >
+      </a> 
+      -->
     </footer>
   </div>
 </template>
