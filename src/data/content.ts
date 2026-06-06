@@ -1,5 +1,6 @@
 import type {
   ContactLink,
+  CurrentRoleSnapshot,
   ExperienceItem,
   HeroContent,
   ProjectCaseStudy,
@@ -7,14 +8,32 @@ import type {
 } from '../types/content';
 
 export const heroContent: HeroContent = {
-  eyebrow: 'Building Software Across the Stack  ',
-  headline: 'Full Stack Software Developer',
+  eyebrow: 'Mid-Level Software Engineer',
+  headline: 'Building Software That Solves Real Business Problems',
   supportingLine:
-    'Building web applications, API integrations, dashboards, developer tools, and workflow systems that solve real business and engineering problems.',
+    'Developing full-stack applications, integrations, and internal platforms that streamline business processes and support day-to-day operations.',
+  chips: [
+    'Web Platforms',
+    'API & Integrations',
+    'Workflow Automation', // Automating business processes through system integrations, queues, scheduled jobs, notifications, and event-driven workflows.
+    'CI/CD & Deployments',
+  ],
   ctas: [
-    { label: 'View Featured Work', href: '#featured-work' },
-    { label: 'GitHub', href: 'https://github.com/reizucodes' },
-    { label: "Let's Connect", href: '#contact' },
+    { label: 'View Featured Projects', href: '#featured-work', variant: 'primary' },
+    { label: 'See Experience', href: '#experience', variant: 'secondary' },
+  ],
+};
+
+export const currentRoleSnapshot: CurrentRoleSnapshot = {
+  eyebrow: 'Current Role Snapshot',
+  title: 'Mid Software Developer at FlowerStore Group',
+  summary:
+    'Delivering full-stack solutions that support e-commerce operations, payment integrations, logistics workflows, and internal business platforms.',
+  highlights: [
+    'Experience: 3 years in production software development',
+    'Domain: E-commerce, Payments & Logistics, Operations',
+    'Specialties: Integrations & Internal Platforms',
+    'Scope: Full-Stack Development & Deployments',
   ],
 };
 
@@ -22,7 +41,9 @@ export const projects: readonly ProjectCaseStudy[] = [
   {
     id: 'job-scraper-dashboard',
     title: 'Job Scraper Dashboard',
+    tier: 'flagship',
     valueProposition: 'Full-stack dashboard product that aggregates multi-source job listings into one searchable workflow.',
+    proofLine: 'Built a resilient ingestion-to-dashboard workflow that turns scattered listings into faster role discovery.',
     positioningContext: 'Full-stack dashboard product for automation-driven job aggregation and filtering.',
     problemContext: 'Manual job hunting across multiple listings was repetitive and hard to compare quickly.',
     summary: 'End-to-end job discovery pipeline with unified filters and export-ready results.',
@@ -50,45 +71,13 @@ export const projects: readonly ProjectCaseStudy[] = [
       { label: 'Source', href: 'https://github.com/reizucodes/job-scraper-dashboard' },
       { label: 'Visit', href: 'https://scrape-jobs-rz.vercel.app/jobs' },
     ],
-    featured: true,
-  },
-  {
-    id: 'digital-library',
-    title: 'Digital Library',
-    valueProposition: 'Makes resource cataloging and retrieval fast for daily operations.',
-    positioningContext: 'Full-stack application for content management and retrieval.',
-    problemContext: 'Managing and finding digital resources quickly required clearer data organization.',
-    summary: 'Full-stack application for structured cataloging, search, and retrieval through API-driven views.',
-    technicalApproach: 'Used domain-focused modules and explicit service boundaries for predictable feature growth.',
-    stackDetails: ['FastAPI', 'Vue 3', 'Pinia', 'SQLAlchemy'],
-    whatBuilt: 'Built a full-stack library system for cataloging, browsing, and retrieving resources through API-driven views and domain-focused modules.',
-    technicalHighlights: ['FastAPI services', 'Vue 3 + Pinia frontend', 'SQLAlchemy data modeling', 'Layered architecture and tests'],
-    outcomeUsefulness: 'Improves discoverability and day-to-day resource management.',
-    deepDive: {
-      architectureDecisions: [
-        'Split catalog, borrowing, and user concerns into separate service modules.',
-        'Used repository abstractions to keep domain logic isolated from ORM details.',
-      ],
-      engineeringDetails: [
-        'Implemented validation rules at API boundaries to keep persisted records consistent.',
-        'Added focused service tests for catalog/search edge cases.',
-      ],
-      lessonsLearned: [
-        'Clear module ownership reduced regression risk during feature additions.',
-        'Contract-first validation reduced invalid-state debugging time.',
-      ],
-    },
-    tags: ['FastAPI', 'Vue 3', 'Pinia', 'SQLAlchemy', 'Testing'],
-    links: [
-      { label: 'Source', href: 'https://github.com/reizucodes/digital-library' },
-      { label: 'Visit', href: 'https://digital-library-rz.vercel.app/' },
-    ],
-    featured: true,
   },
   {
     id: 'laravel-domain-toolkit',
     title: 'Laravel Domain Toolkit',
+    tier: 'flagship',
     valueProposition: 'Developer tooling package that generates domain modules with consistent architecture conventions.',
+    proofLine: 'Standardized module scaffolding into reusable generators that speed up feature starts and reduce architecture drift.',
     positioningContext: 'Proven developer tooling for domain-oriented Laravel module consistency.',
     problemContext: 'New service modules were slow to bootstrap and often drifted from shared conventions.',
     summary: 'Laravel developer tooling package for repeatable domain module scaffolding.',
@@ -112,18 +101,22 @@ export const projects: readonly ProjectCaseStudy[] = [
       ],
     },
     tags: ['Laravel', 'PHP 8+', 'Developer Tooling', 'Code Generation'],
-    links: [{ label: 'Source', href: 'https://github.com/reizucodes/laravel-domain-toolkit' }],
-    featured: true,
+    links: [
+      { label: 'Source', href: 'https://github.com/reizucodes/laravel-domain-toolkit' },
+      { label: 'Visit', href: 'https://packagist.org/packages/reizucodes/laravel-domain-toolkit' },
+    ],
   },
   {
     id: 'swagger-apispec-forge',
-    title: 'Swagger / APISpec Forge',
+    title: 'APISpec',
+    tier: 'flagship',
     valueProposition: 'Developer tooling product that speeds up OpenAPI authoring with guided contract workflows.',
+    proofLine: 'Turned manual API spec work into guided authoring, validation, and preview workflows for faster contract delivery.',
     positioningContext: 'Proven developer tooling with rich UI workflows for OpenAPI contract authoring.',
     problemContext: 'Writing and maintaining API specs manually created inconsistency and slowed documentation work.',
     summary: 'Developer tooling product with rich UI workflows for generating, validating, and refining OpenAPI content.',
     technicalApproach: 'Combined schema templates, validation checks, and live preview to shorten feedback loops.',
-    stackDetails: ['TypeScript', 'OpenAPI', 'Swagger tooling'],
+    stackDetails: ['React | TypeScript', 'OpenAPI', 'Swagger tooling'],
     whatBuilt: 'Built a browser-based developer tool with interactive UI workflows for generating and refining API contract content.',
     technicalHighlights: ['OpenAPI schema generation', 'Swagger workflow support', 'JSON import/export', 'Live preview and iterative edit workflows'],
     outcomeUsefulness: 'Makes API contracts faster to produce and easier to keep aligned across implementation teams.',
@@ -140,17 +133,57 @@ export const projects: readonly ProjectCaseStudy[] = [
         'Small validation hints prevent large downstream spec corrections.',
       ],
     },
-    tags: ['OpenAPI', 'Swagger', 'Schema Tooling', 'TypeScript'],
+    tags: ['React', 'OpenAPI', 'Swagger'],
     links: [
       { label: 'Source', href: 'https://github.com/reizucodes/swagger-forge' },
       { label: 'Visit', href: 'https://apispec-forge.vercel.app/' },
     ],
-    featured: false,
+  },
+  {
+    id: 'digital-library',
+    title: 'Digital Library',
+    tier: 'secondary',
+    valueProposition:'Personal digital library for organizing and managing book collections.',
+    proofLine:'Created a centralized place to catalog, search, and browse books through a simple web interface.',
+    positioningContext:'Full-stack web application for personal book collection management.',
+    problemContext:'Managing a growing book collection required a simple way to organize, search, and retrieve titles.',
+    summary:'Full-stack web application for cataloging, searching, and managing personal book collections.',
+    technicalApproach:'Used modular services and API-driven views to keep the application maintainable as features expanded.',
+    stackDetails: ['FastAPI', 'Vue 3', 'Pinia', 'SQLAlchemy'],
+    whatBuilt:'Built a full-stack digital library application for storing, browsing, searching, and managing books.',
+    technicalHighlights: [
+      'FastAPI',
+      'Vue 3 + Pinia frontend',
+      'SQLAlchemy data modeling',
+      'Layered architecture and tests',
+    ],
+    outcomeUsefulness:'Makes personal book collections easier to organize and manage.',
+    deepDive: {
+      architectureDecisions: [
+        'Split catalog, borrowing, and user concerns into separate service modules.',
+        'Used repository abstractions to keep domain logic isolated from ORM details.',
+      ],
+      engineeringDetails: [
+        'Implemented validation rules at API boundaries to keep persisted records consistent.',
+        'Added focused service tests for catalog/search edge cases.',
+      ],
+      lessonsLearned: [
+        'Clear module ownership reduced regression risk during feature additions.',
+        'Contract-first validation reduced invalid-state debugging time.',
+      ],
+    },
+    tags: ['FastAPI', 'Vue 3', 'Pinia', 'SQLAlchemy', 'Testing'],
+    links: [
+      { label: 'Source', href: 'https://github.com/reizucodes/digital-library' },
+      { label: 'Visit', href: 'https://digital-library-rz.vercel.app/' },
+    ],
   },
   {
     id: 'profile-dashboard',
     title: 'Profile Dashboard',
+    tier: 'optional',
     valueProposition: 'Input a public GitHub repository URL and get quick KPI insights in one dashboard.',
+    proofLine: 'Condensed repository activity into quick-read KPI views for maintainers and technical reviewers.',
     positioningContext: 'Frontend-heavy analytics dashboard for public GitHub repository KPIs and activity metrics.',
     problemContext: 'Checking repository health across commits, pushes, and issues was slow when scattered across multiple GitHub views.',
     summary: 'KPI-style repository dashboard that converts public GitHub repo data into quick operational metrics.',
@@ -175,42 +208,40 @@ export const projects: readonly ProjectCaseStudy[] = [
       { label: 'Source', href: 'https://github.com/reizucodes/profile-dashboard' },
       { label: 'Visit', href: 'https://profile-dashboard-rz.vercel.app/' },
     ],
-    featured: false,
   },
 ];
 
-export const featuredWork: readonly ProjectCaseStudy[] = projects.filter((project) => project.featured);
+const featuredProjectOrder = ['laravel-domain-toolkit', 'job-scraper-dashboard', 'swagger-apispec-forge'];
+const supportingProjectOrder = ['digital-library', 'profile-dashboard'];
+
+export const featuredWork: readonly ProjectCaseStudy[] = featuredProjectOrder
+  .map((projectId) => projects.find((project) => project.id === projectId))
+  .filter((project): project is ProjectCaseStudy => Boolean(project));
+
+export const secondaryProjects: readonly ProjectCaseStudy[] = supportingProjectOrder
+  .map((projectId) => projects.find((project) => project.id === projectId))
+  .filter((project): project is ProjectCaseStudy => Boolean(project));
 
 export const skillGroups: readonly SkillGroup[] = [
   {
-    id: 'frontend-experience',
-    title: 'Frontend Experience',
-    skills: ['Vue 3', 'React', 'TypeScript', 'JavaScript', 'Tailwind CSS'],
+    id: 'frontend',
+    title: 'Frontend',
+    skills: ['Vue 3', 'React', 'TypeScript', 'Responsive UI'],
   },
   {
-    id: 'backend-experience',
-    title: 'Backend Experience',
-    skills: ['Laravel', 'PHP', 'FastAPI', 'Python', 'GraphQL', 'REST API Design', 'Service Boundaries'],
+    id: 'backend-apis',
+    title: 'Backend & APIs',
+    skills: ['Laravel', 'FastAPI', 'REST APIs', 'GraphQL', 'Service boundaries'],
   },
   {
-    id: 'developer-tooling',
-    title: 'Developer Tooling',
-    skills: ['APISpec Forge', 'Laravel Domain Toolkit', 'OpenAPI Workflows', 'Code Generation Patterns'],
+    id: 'integrations',
+    title: 'Integrations',
+    skills: ['Payments', 'Logistics', 'Webhooks', 'Workflow automation', 'Third-party services'],
   },
   {
-    id: 'integrations-automation',
-    title: 'Integrations & Automation',
-    skills: ['Third-party APIs', 'Webhooks', 'Payments', 'Logistics', 'Push Notifs', 'SMS Providers', 'Tooling Automation', 'Workflow Orchestration'],
-  },
-  {
-    id: 'ai-assisted-workflows',
-    title: 'AI-Assisted Workflow Engineering',
-    skills: ['Prompt-guided implementation workflows', 'Planning to QA execution loops', 'Safe coding guardrails', 'Personal project automation'],
-  },
-  {
-    id: 'data-delivery-ops',
-    title: 'Data, Delivery & Ops',
-    skills: ['OpenAPI', 'Schema Design', 'Data Modeling', 'CI/CD Pipelines', 'GitHub Actions', 'Automated Code Checks and Tests', 'Linux SSH', 'Production Deployment Support'],
+    id: 'delivery-ops',
+    title: 'Delivery & Ops',
+    skills: ['OpenAPI workflows', 'Code generation', 'GitHub Actions', 'CI/CD pipelines', 'Deployment support'],
   },
 ];
 
@@ -221,7 +252,7 @@ export const experience: readonly ExperienceItem[] = [
     company: 'FlowerStore Group',
     period: 'March 2025 - Present',
     outcomes: [
-      'Owned end-to-end delivery for payment and logistics workflows across UI, APIs, integrations, and deployment.',
+      'Implemented payment and logistics workflows across frontend applications, APIs, third-party integrations, and deployment processes.',
       'Built internal dashboards and tooling that improved operational visibility and reduced manual handling overhead.',
     ],
   },
@@ -231,7 +262,7 @@ export const experience: readonly ExperienceItem[] = [
     company: 'FlowerStore Group',
     period: 'July 2023 - March 2025',
     outcomes: [
-      'Shipped full-stack e-commerce and delivery features with maintainable frontend and backend boundaries.',
+      'Developed full-stack e-commerce and delivery features with maintainable frontend and backend boundaries.',
       'Improved reliability through clearer validation, UI feedback states, and structured implementation patterns.',
     ],
   },
@@ -241,7 +272,7 @@ export const experience: readonly ExperienceItem[] = [
     company: 'Bicol University Open University',
     period: 'July 2022 - November 2022',
     outcomes: [
-      'Supported admissions platform development with full-stack workflow features.',
+      'Developed admissions platform development with full-stack workflow features.',
       'Delivered scoped enhancements for data-backed user flows and internal operations.',
     ],
   },

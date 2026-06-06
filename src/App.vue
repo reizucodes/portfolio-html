@@ -1,21 +1,31 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ContactSection from './components/sections/ContactSection.vue';
+import CurrentRoleSnapshotSection from './components/sections/CurrentRoleSnapshotSection.vue';
 import ExperienceSection from './components/sections/ExperienceSection.vue';
 import HeroSection from './components/sections/HeroSection.vue';
 import ProjectsGridSection from './components/sections/ProjectsGridSection.vue';
 import SkillsSection from './components/sections/SkillsSection.vue';
-import { contactLinks, experience, featuredWork, heroContent, projects, skillGroups } from './data/content';
+import {
+  contactLinks,
+  currentRoleSnapshot,
+  experience,
+  featuredWork,
+  heroContent,
+  secondaryProjects,
+  skillGroups,
+} from './data/content';
 
 const currentYear = new Date().getFullYear();
 const isMobileNavOpen = ref(false);
 const mobileNavId = 'primary-navigation-menu';
 const navLinks = [
-  { href: '#featured-work', label: 'Featured Work' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#skills', label: 'Skills' },
+  { href: '#current-role', label: 'Current Role' },
+  { href: '#featured-work', label: 'Featured Projects' },
   { href: '#experience', label: 'Experience' },
-  { href: '#contact', label: 'Contact', cta: true },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'More Projects' },
+  { href: '#contact', label: "Let's Connect", cta: true },
 ];
 </script>
 
@@ -75,20 +85,23 @@ const navLinks = [
 
     <main id="main-content" class="mx-auto flex w-full max-w-7xl flex-col gap-16 px-4 py-10 sm:px-6 lg:px-8">
       <HeroSection :content="heroContent" />
+      <CurrentRoleSnapshotSection :snapshot="currentRoleSnapshot" />
       <ProjectsGridSection
         id="featured-work"
-        title="Featured Work"
+        title="Featured Projects"
+        intro="Three projects that best show my fit for full-stack product and platform engineering roles."
         variant="case-study"
         :projects="featuredWork"
       />
+      <ExperienceSection :items="experience" />
+      <SkillsSection :groups="skillGroups" />
       <ProjectsGridSection
         id="projects"
-        title="Full Projects"
+        title="Additional Projects"
+        intro="Supporting work that adds range without competing with the flagship proof above."
         variant="overview"
-        :projects="projects"
+        :projects="secondaryProjects"
       />
-      <SkillsSection :groups="skillGroups" />
-      <ExperienceSection :items="experience" />
       <ContactSection :links="contactLinks" />
     </main>
     <footer class="py-6">
