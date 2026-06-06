@@ -11,7 +11,7 @@ defineProps<{
     <div class="space-y-2">
       <h2 id="experience-heading" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Experience</h2>
       <p class="max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-        Recent roles centered on production ownership across UI, backend services, integrations, and operational workflows.
+        Recent work across e-commerce, logistics, and internal platforms.
       </p>
     </div>
     <ol class="grid gap-4 lg:grid-cols-3">

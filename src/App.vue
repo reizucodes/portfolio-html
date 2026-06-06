@@ -89,7 +89,7 @@ const navLinks = [
       <ProjectsGridSection
         id="featured-work"
         title="Featured Projects"
-        intro="Three projects that best show my fit for full-stack product and platform engineering roles."
+        intro="Selected work across developer tooling, automation, and product delivery that reflects how I build."
         variant="case-study"
         :projects="featuredWork"
       />
@@ -98,7 +98,7 @@ const navLinks = [
       <ProjectsGridSection
         id="projects"
         title="Additional Projects"
-        intro="Supporting work that adds range without competing with the flagship proof above."
+        intro="Projects that show my range across dashboards, internal tools, and full-stack application work."
         variant="overview"
         :projects="secondaryProjects"
       />

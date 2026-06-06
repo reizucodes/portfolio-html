@@ -11,7 +11,7 @@ defineProps<{
     <div class="space-y-2">
       <h2 id="skills-heading" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Skills</h2>
       <p class="max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-        Focused on the stack and systems work that best supports full-stack engineering roles.
+        The stack I use most often for shipping production features, integrations, and delivery workflows.
       </p>
     </div>
     <div class="grid gap-4 sm:grid-cols-2">
