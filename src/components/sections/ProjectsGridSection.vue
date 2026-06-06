@@ -138,16 +138,6 @@ onBeforeUnmount(() => {
       >
         <div class="flex items-start justify-between gap-3">
           <h3 :class="variant === 'case-study' ? 'text-xl font-semibold text-white' : 'text-lg font-semibold text-white'">{{ project.title }}</h3>
-          <span
-            class="rounded-full border px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em]"
-            :class="variant === 'case-study'
-              ? 'border-emerald-300/30 bg-emerald-400/10 text-emerald-200'
-              : project.tier === 'secondary'
-                ? 'border-cyan-300/30 bg-cyan-400/10 text-cyan-200'
-                : 'border-white/15 bg-white/5 text-slate-300'"
-          >
-            {{ variant === 'case-study' ? 'Flagship' : project.tier === 'secondary' ? 'Secondary' : 'Supporting' }}
-          </span>
         </div>
 
         <p :class="variant === 'case-study' ? 'mt-3 text-sm leading-relaxed text-slate-300' : 'mt-2 text-sm leading-relaxed text-slate-300'">
@@ -189,8 +179,8 @@ onBeforeUnmount(() => {
           </span>
         </div>
 
-        <div :class="variant === 'case-study' ? 'mt-5 flex flex-wrap items-end justify-between gap-4' : 'mt-4 flex flex-wrap items-end justify-between gap-4'">
-          <div class="flex flex-wrap gap-x-4 gap-y-2">
+        <div :class="variant === 'case-study' ? 'mt-5 flex flex-wrap items-center justify-between gap-4' : 'mt-4 flex flex-wrap items-center justify-between gap-4'">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
             <a
               v-for="link in project.links"
               :key="link.href"
@@ -209,7 +199,7 @@ onBeforeUnmount(() => {
           <button
             type="button"
             :class="[
-              'ml-auto rounded-full border border-white/20 bg-white/5 text-xs font-semibold uppercase tracking-[0.12em] text-slate-100 transition hover:bg-white/15',
+              'ml-auto self-center rounded-full border border-white/20 bg-white/5 text-xs font-semibold uppercase tracking-[0.12em] text-slate-100 transition hover:bg-white/15',
               variant === 'case-study' ? 'px-4 py-2' : 'border-white/10 bg-transparent px-3.5 py-2 text-slate-300 hover:bg-white/10 hover:text-slate-100',
             ]"
             @click="openProjectModal(project.id)"

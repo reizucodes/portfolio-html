@@ -33,7 +33,6 @@ export interface ProjectDeepDive {
 export interface ProjectCaseStudy {
   id: string;
   title: string;
-  tier: 'flagship' | 'secondary' | 'optional';
   valueProposition: string;
   proofLine: string;
   positioningContext: string;

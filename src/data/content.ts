@@ -41,7 +41,6 @@ export const projects: readonly ProjectCaseStudy[] = [
   {
     id: 'job-scraper-dashboard',
     title: 'Job Scraper Dashboard',
-    tier: 'flagship',
     valueProposition: 'Full-stack dashboard product that aggregates multi-source job listings into one searchable workflow.',
     proofLine: 'Built a resilient ingestion-to-dashboard workflow that turns scattered listings into faster role discovery.',
     positioningContext: 'Full-stack dashboard product for automation-driven job aggregation and filtering.',
@@ -75,7 +74,6 @@ export const projects: readonly ProjectCaseStudy[] = [
   {
     id: 'laravel-domain-toolkit',
     title: 'Laravel Domain Toolkit',
-    tier: 'flagship',
     valueProposition: 'Developer tooling package that generates domain modules with consistent architecture conventions.',
     proofLine: 'Standardized module scaffolding into reusable generators that speed up feature starts and reduce architecture drift.',
     positioningContext: 'Proven developer tooling for domain-oriented Laravel module consistency.',
@@ -109,7 +107,6 @@ export const projects: readonly ProjectCaseStudy[] = [
   {
     id: 'swagger-apispec-forge',
     title: 'APISpec',
-    tier: 'flagship',
     valueProposition: 'Developer tooling product that speeds up OpenAPI authoring with guided contract workflows.',
     proofLine: 'Turned manual API spec work into guided authoring, validation, and preview workflows for faster contract delivery.',
     positioningContext: 'Proven developer tooling with rich UI workflows for OpenAPI contract authoring.',
@@ -142,7 +139,6 @@ export const projects: readonly ProjectCaseStudy[] = [
   {
     id: 'digital-library',
     title: 'Digital Library',
-    tier: 'secondary',
     valueProposition:'Personal digital library for organizing and managing book collections.',
     proofLine:'Created a centralized place to catalog, search, and browse books through a simple web interface.',
     positioningContext:'Full-stack web application for personal book collection management.',
@@ -181,7 +177,6 @@ export const projects: readonly ProjectCaseStudy[] = [
   {
     id: 'profile-dashboard',
     title: 'Profile Dashboard',
-    tier: 'optional',
     valueProposition: 'Input a public GitHub repository URL and get quick KPI insights in one dashboard.',
     proofLine: 'Condensed repository activity into quick-read KPI views for maintainers and technical reviewers.',
     positioningContext: 'Frontend-heavy analytics dashboard for public GitHub repository KPIs and activity metrics.',
