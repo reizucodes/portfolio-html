@@ -250,6 +250,7 @@ export const experience: readonly ExperienceItem[] = [
       'Implemented payment and logistics workflows across frontend applications, APIs, third-party integrations, and deployment processes.',
       'Built internal dashboards and tooling that improved operational visibility and reduced manual handling overhead.',
     ],
+    tags: ['Laravel', 'Vue 3','API Integrations', 'DevOps'],
   },
   {
     id: 'flowerstore-junior',
@@ -260,6 +261,7 @@ export const experience: readonly ExperienceItem[] = [
       'Developed full-stack e-commerce and delivery features with maintainable frontend and backend boundaries.',
       'Improved reliability through clearer validation, UI feedback states, and structured implementation patterns.',
     ],
+    tags: ['Laravel', 'Vue 3', 'GraphQL', 'REST APIs'],
   },
   {
     id: 'bu-intern',
@@ -267,9 +269,10 @@ export const experience: readonly ExperienceItem[] = [
     company: 'Bicol University Open University',
     period: 'July 2022 - November 2022',
     outcomes: [
-      'Developed admissions platform development with full-stack workflow features.',
+      'Developed an admissions platform with authentication, data capture, and internal workflow features.',
       'Delivered scoped enhancements for data-backed user flows and internal operations.',
     ],
+    tags: ['HTML', 'Tailwind', 'JQuery', 'PHP', 'MySQL'],
   },
 ];
 

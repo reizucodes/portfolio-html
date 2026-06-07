@@ -1,38 +1,26 @@
-# portfolio-html
+# reizucodes portfolio
 
-Full-stack software developer portfolio implemented as a Vue 3 + TypeScript + Tailwind single-page app.
+A personal portfolio site that highlights my software engineering experience, selected projects, technical strengths, and contact links.
 
-## Stack
+## Overview
+- Built as a single-page Vue application with typed content data.
+- Focused on showcasing full-stack product work, developer tooling, and internal platform experience.
+- Includes featured project case studies, additional project summaries, skills, and role-based experience highlights.
+
+## Main Sections
+- Hero introduction
+- Current role snapshot
+- Featured projects
+- Experience
+- Skills
+- Additional projects
+- Contact
+
+## Tech Used
 - Vue 3
-- TypeScript (strict)
+- TypeScript
 - Tailwind CSS
 - Vite
 
-## Development
-- Install dependencies: `npm install`
-- Start dev server: `npm run dev`
-- Type-check and build production assets: `npm run build`
-- Preview production build: `npm run preview`
-
-## Project Structure
-- `src/App.vue`: page composition and section order.
-- `src/data/content.ts`: typed content source (hero, projects, skills, experience, contact).
-- `src/types/content.ts`: shared content contracts.
-- `src/components/sections/*`: section components.
-
-## Content Model Notes
-- Hero content is data-driven via `heroContent`:
-  - `eyebrow`
-  - `headline`
-  - `supportingLine`
-  - `ctas[]` (used for "View Featured Work", "GitHub", "Contact")
-- Projects follow a mini case-study structure:
-  - problem/context
-  - what was built
-  - technical highlights
-  - outcome/usefulness
-- `featured` controls which projects are highlighted in the Featured Work case-study section.
-- Full Projects intentionally renders all projects (including featured) as a complete index.
-
-## Build Output
-- Vite outputs static assets to `dist/`.
+## Setup
+Development and local run steps live in [`SETUP_INSTRUCTIONS.md`](./SETUP_INSTRUCTIONS.md).

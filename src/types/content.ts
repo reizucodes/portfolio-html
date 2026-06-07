@@ -60,6 +60,7 @@ export interface ExperienceItem {
   company: string;
   period: string;
   outcomes: string[];
+  tags: string[];
 }
 
 export interface ContactLink {
