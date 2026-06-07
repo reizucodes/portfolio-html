@@ -10,3 +10,5 @@ artifacts/
 .opencode/
 .claude/
 opencode.json
+/*.md
+/public/favicon.zip

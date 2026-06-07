@@ -68,7 +68,7 @@ export const projects: readonly ProjectCaseStudy[] = [
     tags: ['FastAPI', 'Vue 3', 'TypeScript', 'Scraping', 'Dashboard'],
     links: [
       { label: 'Source', href: 'https://github.com/reizucodes/job-scraper-dashboard' },
-      { label: 'Visit', href: 'https://scrape-jobs-rz.vercel.app/jobs' },
+      { label: 'Visit', href: 'https://scrape-jobs.reizucodes.com/jobs' },
     ],
   },
   {
@@ -133,7 +133,7 @@ export const projects: readonly ProjectCaseStudy[] = [
     tags: ['React', 'OpenAPI', 'Swagger'],
     links: [
       { label: 'Source', href: 'https://github.com/reizucodes/swagger-forge' },
-      { label: 'Visit', href: 'https://apispec-forge.vercel.app/' },
+      { label: 'Visit', href: 'https://api-spec.reizucodes.com/' },
     ],
   },
   {
