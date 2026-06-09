@@ -13,7 +13,13 @@ defineProps<{
   >
     <div class="pointer-events-none absolute -right-14 -top-10 h-48 w-48 rounded-full bg-emerald-400/20 blur-3xl"></div>
     <div class="pointer-events-none absolute -left-14 bottom-0 h-40 w-40 rounded-full bg-cyan-400/20 blur-3xl"></div>
-    <p class="relative text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300/90">{{ content.eyebrow }}</p>
+    <!-- uses mobileEyebrow on mobileViewPort -->
+    <p class="relative text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300/90 md:hidden">
+      {{ content.mobileEyebrow ?? content.eyebrow }}
+    </p>
+    <p class="relative hidden text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300/90 md:block">
+      {{ content.eyebrow }}
+    </p>
     <div class="relative mt-4 max-w-5xl">
       <div>
         <h1 class="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:max-w-4xl lg:text-6xl">

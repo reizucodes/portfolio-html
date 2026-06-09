@@ -9,6 +9,7 @@ import type {
 
 export const heroContent: HeroContent = {
   eyebrow: 'John Blaise Bueno | Software Engineer',
+  mobileEyebrow: 'John Blaise | Software Engineer',
   headline: 'Building Software That Solves Real Business Problems',
   supportingLine:
     'Developing full-stack applications, integrations, and internal platforms that streamline business processes and support day-to-day operations.',

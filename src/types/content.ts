@@ -1,5 +1,6 @@
 export interface HeroContent {
   eyebrow: string;
+  mobileEyebrow: string;
   headline: string;
   supportingLine: string;
   chips: string[];
